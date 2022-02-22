@@ -1,5 +1,2 @@
-a = 1,2
-b = 1, 2, 2, 3
-if a in b:
-    print("123")
-print(b)
+a=[1,2,3,4]
+print(5 in a)
