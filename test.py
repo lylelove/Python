@@ -7,4 +7,4 @@ def toTxtFile(fn):                     # 函数定义
                 fp.write('ignored\n')
         fp.write('finished\n')         # for循环结构结束
     print('all jobs done')             # with块结束
-toTxtFile('readme.md')
+toTxtFile('README.md')
