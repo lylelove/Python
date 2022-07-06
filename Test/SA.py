@@ -1,7 +1,5 @@
 import math
 import random
-import turtle
-
 import numpy as np
 from matplotlib import pyplot as plt
 
@@ -102,7 +100,7 @@ def change_res(routes, points):
 def kl_min(kl, routes, points):
     all_routes = []
     all_dis = []
-    
+
     for i in range(kl):
         routes_changed = change_res(routes, points)
         all_routes.append(routes_changed)

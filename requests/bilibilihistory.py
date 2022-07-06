@@ -1,7 +1,7 @@
 import requests
 import time
 
-cookies="_uuid=913422E9-311E-E3310-E1B9-4710102716563491215infoc; SESSDATA=bbcbd429%2C1654088020%2C14c90%2Ac1"
+cookies="_uuid=FB5B91B7-310AA-DC35-10B10B-6ED3951BECCE85397infoc; SESSDATA=f4d7ca06%2C1672479765%2Cfabf8*71"
 url="https://api.bilibili.com/x/web-interface/history/cursor"
 hd = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                     'Chrome/99.0.4844.82 Safari/537.36'}
