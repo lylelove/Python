@@ -14,14 +14,14 @@ def nums_out(train_x, train_y, wi):
         test_y.append(temp_y)
     test_y_dis = 0
     for i in range(len(test_y)):
-        test_y_dis = test_y_dis + math.pow(abs(test_y[i] - train_y[i]),2)
+        test_y_dis = test_y_dis + math.pow(abs(test_y[i] - train_y[i]), 2)
     return test_y_dis
 
 
 def test_num(wi, test_x):
     test_y = 0
     for i in range(len(wi)):
-        test_y = test_y + wi[i] * pow(test_x,i)
+        test_y = test_y + wi[i] * pow(test_x, i)
     return test_y
 
 
@@ -38,7 +38,7 @@ def get_best(best_wi, size, train_x, train_y):
     dis_all = []
     wi_all = []
     for i in range(size):
-        new_wi= change_wb(best_wi)
+        new_wi = change_wb(best_wi)
         wi_all.append(new_wi)
         dis_all.append(nums_out(train_x, train_y, new_wi))
     dis_min = dis_all.index(min(dis_all))
@@ -56,8 +56,8 @@ def gen(wi, num, size, train_x, train_y):
         best_dis_lin.append(best_dis)
     test_ys = []
     for i in range(len(train_x)):
-        test_ys.append(test_num(wi,train_x[i]))
-    return best_dis, wi,test_ys, best_dis_lin
+        test_ys.append(test_num(wi, train_x[i]))
+    return best_dis, wi, test_ys, best_dis_lin
 
 
 def draw_lin(lin):
@@ -67,13 +67,13 @@ def draw_lin(lin):
 
 
 if __name__ == '__main__':
-    train_x = [2019, 2018, 2017, 2016, 2015, 2014, 2013, 2012, 2011, 2010]
-    train_y = [70078, 65534, 59592, 53783, 49922, 46912, 43397, 39771, 36277, 30808]
-    wi = [1, 1,1,1,1,1]
+    train_x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20]
+    train_y = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100, 110, 120, 130, 140, 150, 160, 170, 180, 190, 200]
+    wi = [1,1]
     num = 400
     size = 400
-    res = gen(wi,num, size, train_x, train_y)
-    test_x = [2020,2021]
+    res = gen(wi, num, size, train_x, train_y)
+    test_x = [21,22,23]
     test_ys = []
     for i in range(len(test_x)):
         test_ys.append(test_num(res[1], test_x[i]))
